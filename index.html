@@ -5,7 +5,6 @@
 	<title>Stopwatch</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style.css">
-	<script src="js/main.js"></script>
 </head>
 <body>
 
@@ -18,13 +17,13 @@
 
 		<!-- timer buttons -->
 		<div class="class timer-buttons">
-			<button class="btn btn-lg btn-success">
+			<button class="btn btn-lg btn-success" data-action="start">
 			Start
 			</button>
-			<button class="btn btn-lg btn-danger">
+			<button class="btn btn-lg btn-danger" data-action="stop">
 			Stop
 			</button>
-			<button class="btn btn-link btn-block">
+			<button class="btn btn-link btn-block" data-action = "reset">
 			Reset
 			</button>
 		</div>
@@ -32,6 +31,7 @@
 
 
 
+<script src="js/main.js"></script>
 
 	
 </body>

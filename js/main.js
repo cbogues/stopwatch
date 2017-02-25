@@ -7,6 +7,7 @@ let timerTime = 00;
 let isRunning = false;
 let interval;
 
+// start the timer
 function startTimer() {
 	if (isRunning) return;
 
@@ -14,7 +15,7 @@ function startTimer() {
 	interval = setInterval(incrementTimer, 1000);
 }
 
-
+// stop the timer
 function stopTimer() {
 	if(!isRunning) return;
 	isRunning = false;
@@ -23,12 +24,17 @@ function stopTimer() {
 
 }
 
-
+// reset the timer
 function resetTimer() {
+	stopTimer();
+
+	timerTime = 0;
+	minutes.innerText = '00';
+	seconds.innerText = '00';
 
 }
 
-
+// to make sure Minutes and seconds are incrementing properly
 function incrementTimer() {
 	timerTime++;
 
@@ -36,7 +42,7 @@ function incrementTimer() {
 	const numOfMinutes = Math.floor(timerTime / 60);
 	const numOfSeconds = timerTime % 60;
 
-	console.log({numOfMinutes, numOfSeconds});
+	// console.log({numOfMinutes, numOfSeconds});
 
 	minutes.innerText = pad(numOfMinutes);
 	seconds.innerText = pad(numOfSeconds);
@@ -44,7 +50,7 @@ function incrementTimer() {
 
 }
 
-
+// Adds the '0' to single digit numbers
 function pad(number) {
 	return (number < 10) ? '0' + number : number;
 	// if(number < 10){

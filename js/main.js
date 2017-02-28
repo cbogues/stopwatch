@@ -1,3 +1,6 @@
+(function() {
+
+
 const startButton = document.querySelector('[data-action="start"]');
 const stopButton = document.querySelector('[data-action="stop"]');
 const resetButton = document.querySelector('[data-action="reset"]');
@@ -66,3 +69,5 @@ function pad(number) {
 startButton.addEventListener('click', startTimer);
 stopButton.addEventListener('click', stopTimer);
 resetButton.addEventListener('click',resetTimer);
+
+})();
